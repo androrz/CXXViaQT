@@ -1,2 +1,2 @@
-# CXXViaQT
+# CxxViaQt
 c++ and qt tests
