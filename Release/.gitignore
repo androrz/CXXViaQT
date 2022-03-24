@@ -1,0 +1,13 @@
+*.res
+*.log
+*.pdb
+*.recipe
+*.exe
+*.txt
+*.obj
+*.ilk
+/CxxViaQt.tlog
+/moc
+/qmake
+/rcc
+/uic
