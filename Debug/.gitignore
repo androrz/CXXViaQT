@@ -6,6 +6,7 @@
 *.txt
 *.obj
 *.ilk
+!*.dll
 /CxxViaQt.tlog
 /moc
 /qmake
