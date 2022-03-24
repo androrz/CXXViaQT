@@ -51,7 +51,10 @@ void CxxViaQt::chipCheck()
         HWM_SIO1->Get_ChipID(MSB, LSB);
         g_ChipID = MSB * 256 + LSB;
     }
-    ui.lbl_chipid->setText(QString::number(g_ChipID));
+    if (g_ChipID != 0x8785) {
+        printf("wrong chipid!\r\n");
+    }
+    ui.lbl_chipid->setText(QString::number(g_ChipID, 16));
 }
 
 void CxxViaQt::getGpioAddress()
@@ -59,5 +62,5 @@ void CxxViaQt::getGpioAddress()
     int MSB, LSB;
     HWM_SIO1->Get_LDN_BaseAddr(0x07, MSB, LSB);
     GPIO_addr = MSB * 256 + LSB;
-    ui.lbl_address->setText(QString::number(GPIO_addr));
+    ui.lbl_address->setText(QString::number(GPIO_addr, 16));
 }
